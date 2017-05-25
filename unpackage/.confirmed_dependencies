@@ -1,0 +1,30 @@
+{
+	"index.html": {
+		"resources": [
+			"images/banner2.jpg",
+			"images/banner1.jpg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"images/banner4.jpg",
+			"js/services/pages.js",
+			"images/banner3.jpg",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"login.html"
+		]
+	},
+	"login.html": {
+		"resources": [
+			"images/loginbg.jpg",
+			"images/logo.png",
+			"css/global.css",
+			"css/font-awesome.min.css",
+			"js/flexible.js",
+			"css/bootstrap.min.css"
+		],
+		"refer": [
+			"index.html"
+		]
+	}
+}

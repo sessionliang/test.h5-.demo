@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>登录</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/global.css">
+		<style>
+			html {
+				font-size: 12px;
+			}
+			
+			input[type=checkbox] {
+				-webkit-appearance: none;
+				appearance: none;
+				width: 12px;
+				height: 12px;
+				margin: 0;
+				cursor: pointer;
+				vertical-align: bottom;
+				background: none;
+				border: 1px solid #32b6e0;
+				-webkit-border-radius: 1px;
+				-moz-border-radius: 1px;
+				border-radius: 1px;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				position: relative;
+				content: "";
+			}
+			
+			input[type=checkbox]:checked {
+				content: url(img/login-checkbox.png);
+				display: block;
+				position: absolute;
+			}
+			
+			input[type=checkbox]:checked::after {
+				content: url(img/login-checkbox.png);
+				display: block;
+				position: absolute;
+			}
+			
+			input[type=checkbox]:focus {
+				outline: none;
+				border-color: #32b6e0;
+			}
+			
+			.login-box input::-ms-input-placeholder {
+				text-align: center;
+				color: #999!important;
+			}
+			
+			.login-box input::-webkit-input-placeholder {
+				text-align: center;
+				color: #999!important;
+			}
+			
+			.login-box input {
+				text-align: center;
+			}
+			
+			input::-ms-input-placeholder {
+				text-align: center;
+				color: #999!important;
+			}
+			
+			input::-webkit-input-placeholder {
+				text-align: center;
+				color: #999!important;
+			}
+		</style>
+	</head>
+
+	<body class="loginbg">
+		<div class="back-pos">
+			<div class="contmiddle">
+				<div class="login-logo"><img src="images/logo.png" alt=""></div>
+				<div class="login-box">
+					<input type="text" class="form-control login-inp" placeholder="Company">
+					<input type="text" class="form-control login-inp login-margin-sm" placeholder="User Name">
+					<input type="password" class="form-control login-inp login-margin-xs" placeholder="Password">
+					<div class="checkbox login-check">
+						<label class="remberme">
+                        <input type="checkbox" value="">Remember Me
+                    </label>
+					</div>
+				</div>
+				<div class="login-btn">
+					<a id="lkLogin" class="btn btn-submit" href="javascript:;" role="button">SUBMIT</a>
+				</div>
+			</div>
+
+		</div>
+		<script src="js/flexible.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/services/pages.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			(function(mui, doc) {
+				mui.init({
+					preloadPages: [
+						localink.pages.INDEX
+					]
+				});
+				mui.plusReady(function() {
+					//plus准备好之后
+				});
+				mui.ready(function() {
+					//文档准备好之后
+					mui("#lkLogin")[0].addEventListener("tap", function() {
+						login();
+					});
+
+					function login() {
+						mui.openWindow(localink.pages.INDEX);
+					}
+				});
+			})(mui, document);
+		</script>
+	</body>
+
+</html>
